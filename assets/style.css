@@ -6,7 +6,7 @@
   --muted:#5b6476;
   --border: rgba(15, 23, 42, 0.12);
   --primary:#7a1f3d;
-  --primary2:#c48a2a;
+  --primary2:#a21caf;
   --accent:#7c3aed;
   --shadow: 0 18px 60px rgba(2, 6, 23, .10);
   --shadow2: 0 12px 34px rgba(2, 6, 23, .08);
@@ -65,7 +65,7 @@ a{ color:inherit; text-decoration:none; }
   box-shadow: 0 16px 50px rgba(122,31,61,.20);
 }
 .btn.primary:hover{
-  box-shadow: 0 20px 70px rgba(196,138,42,.20), 0 20px 70px rgba(122,31,61,.16);
+  box-shadow: 0 20px 70px rgba(162,28,175,.20), 0 20px 70px rgba(122,31,61,.16);
 }
 .btn.ghost{ background: rgba(255,255,255,.80); }
 .btn.small{ padding: 10px 14px; font-size: 13px; }
@@ -216,7 +216,7 @@ a{ color:inherit; text-decoration:none; }
   padding: 62px 0 26px;
   border-bottom: 1px solid rgba(15,23,42,.06);
   background:
-    radial-gradient(1200px 700px at 10% -10%, rgba(196,138,42,.22), transparent 55%),
+    radial-gradient(1200px 700px at 10% -10%, rgba(162,28,175,.22), transparent 55%),
     radial-gradient(1200px 700px at 95% -15%, rgba(122,31,61,.24), transparent 55%),
     radial-gradient(900px 600px at 60% 35%, rgba(124,58,237,.12), transparent 60%),
     linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
@@ -336,7 +336,7 @@ h1{
 }
 .badge.high{ background: rgba(239,68,68,.10); border-color: rgba(239,68,68,.22); }
 .badge.med{ background: rgba(245,158,11,.12); border-color: rgba(245,158,11,.22); }
-.badge.low{ background: rgba(196,138,42,.12); border-color: rgba(196,138,42,.22); }
+.badge.low{ background: rgba(162,28,175,.12); border-color: rgba(162,28,175,.22); }
 
 .bar{
   margin-top: 10px;
@@ -370,7 +370,7 @@ h1{
   padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid rgba(15,23,42,.10);
-  background: rgba(196,138,42,.10);
+  background: rgba(162,28,175,.10);
 }
 .muted{ color: rgba(91,100,118,.95); font-weight: 700; }
 .small{ font-size: 12px; margin-top: 8px; }
@@ -472,7 +472,7 @@ h1{
 .colIcon{
   width: 46px; height:46px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(122,31,61,.16), rgba(196,138,42,.16));
+  background: linear-gradient(135deg, rgba(122,31,61,.16), rgba(162,28,175,.16));
   border: 1px solid rgba(122,31,61,.20);
   display:flex; align-items:center; justify-content:center;
   font-size: 18px;
@@ -520,7 +520,7 @@ h1{
   border-color: rgba(122,31,61,.25);
   background:
     radial-gradient(420px 220px at 20% 0%, rgba(122,31,61,.14), transparent 60%),
-    radial-gradient(420px 220px at 80% 0%, rgba(196,138,42,.12), transparent 60%),
+    radial-gradient(420px 220px at 80% 0%, rgba(162,28,175,.12), transparent 60%),
     #fff;
 }
 .rk{ font-weight: 950; font-size: 13px; letter-spacing:-0.01em; }
@@ -559,7 +559,7 @@ h1{
 .fIcon{
   width: 44px; height:44px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(122,31,61,.16), rgba(196,138,42,.16));
+  background: linear-gradient(135deg, rgba(122,31,61,.16), rgba(162,28,175,.16));
   border: 1px solid rgba(122,31,61,.20);
   display:flex; align-items:center; justify-content:center;
   margin-bottom: 10px;
@@ -590,7 +590,7 @@ h1{
   color: rgba(91,100,118,.95);
 }
 .tab.active{
-  background: linear-gradient(90deg, rgba(122,31,61,.14), rgba(196,138,42,.14));
+  background: linear-gradient(90deg, rgba(122,31,61,.14), rgba(162,28,175,.14));
   color: rgba(15,23,42,.90);
   border: 1px solid rgba(122,31,61,.18);
 }
@@ -779,7 +779,7 @@ h1{
   border-color: rgba(122,31,61,.25);
   background:
     radial-gradient(420px 220px at 20% 0%, rgba(122,31,61,.16), transparent 60%),
-    radial-gradient(420px 220px at 80% 0%, rgba(196,138,42,.14), transparent 60%),
+    radial-gradient(420px 220px at 80% 0%, rgba(162,28,175,.14), transparent 60%),
     #fff;
 }
 .pTag{
@@ -840,7 +840,7 @@ h1{
   padding: 84px 0;
   background:
     radial-gradient(1000px 600px at 20% 0%, rgba(122,31,61,.24), transparent 55%),
-    radial-gradient(900px 540px at 80% 0%, rgba(196,138,42,.18), transparent 55%),
+    radial-gradient(900px 540px at 80% 0%, rgba(162,28,175,.18), transparent 55%),
     linear-gradient(180deg, #0b0f19 0%, #070a12 100%);
   color:#fff;
   border-top: 1px solid rgba(255,255,255,.08);
