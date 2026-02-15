@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClaimKompas — Kifid‑voor beslisondersteuning voor verzekeraars</title>
+  <meta name="description" content="ClaimKompas helpt verzekeraars Kifid-escalaties te voorkomen: triage → precedent → besluit. Zie risico, vergelijkbare uitspraken en next-best-action in één dashboard." />
+  <meta name="theme-color" content="#0b0f19" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Naar inhoud</a>
+
+  <!-- Header (Nmbrs-like: clear nav + subtle dropdowns) -->
+  <header class="hdr" role="banner">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="ClaimKompas home">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="btxt">
+          <span class="bname">ClaimKompas</span>
+          <span class="bsub">Voor verzekeraars • Kifid‑voor beslisondersteuning</span>
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Hoofdnavigatie">
+        <div class="dd">
+          <button class="ddBtn" aria-expanded="false" aria-controls="dd-voorwie">Voor wie</button>
+          <div class="ddPane" id="dd-voorwie" role="menu">
+            <a href="#voorwie" role="menuitem">Claims teams</a>
+            <a href="#voorwie" role="menuitem">Legal & Compliance</a>
+            <a href="#voorwie" role="menuitem">Volmacht / Operations</a>
+          </div>
+        </div>
+
+        <div class="dd">
+          <button class="ddBtn" aria-expanded="false" aria-controls="dd-features">Features</button>
+          <div class="ddPane" id="dd-features" role="menu">
+            <a href="#features" role="menuitem">Triage op escalatierisico</a>
+            <a href="#features" role="menuitem">Precedent Finder</a>
+            <a href="#features" role="menuitem">Scenario’s pay/settle/fight</a>
+            <a href="#features" role="menuitem">Audit‑trail & export</a>
+          </div>
+        </div>
+
+        <div class="dd">
+          <button class="ddBtn" aria-expanded="false" aria-controls="dd-product">Product</button>
+          <div class="ddPane" id="dd-product" role="menu">
+            <a href="#product" role="menuitem">Product tour</a>
+            <a href="#product" role="menuitem">Interface‑screens</a>
+            <a href="functionaliteiten.html" role="menuitem">Functionaliteitenlijst</a>
+          </div>
+        </div>
+
+        <a class="link" href="#prijzen">Tarieven</a>
+        <a class="link" href="#faq">FAQ</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn ghost" href="functionaliteiten.html">Download lijst</a>
+        <a class="btn primary" href="#demo">Boek demo</a>
+        <button class="burger" id="burger" aria-label="Menu openen">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawerCard" role="dialog" aria-label="Menu">
+      <div class="drawerTop">
+        <div class="drawerTitle">Menu</div>
+        <button class="iconBtn" id="drawerClose" aria-label="Sluiten">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <a class="dlink" href="#voorwie">Voor wie</a>
+      <a class="dlink" href="#features">Features</a>
+      <a class="dlink" href="#product">Product tour</a>
+      <a class="dlink" href="#prijzen">Tarieven</a>
+      <a class="dlink" href="#faq">FAQ</a>
+      <a class="dlink" href="functionaliteiten.html">Functionaliteitenlijst</a>
+
+      <div class="drow">
+        <a class="btn ghost small" href="functionaliteiten.html">Download</a>
+        <a class="btn primary small" href="#demo">Boek demo</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="container heroGrid">
+        <div class="heroCopy">
+          <div class="pill">
+            <span class="dot" aria-hidden="true"></span>
+            <span><b>Kifid‑voor</b>: voorkom escalatie vóór de procedure start</span>
+          </div>
+
+          <h1>
+            De complete oplossing voor<br />
+            <span class="grad">escalatie‑preventie</span> bij claimbeslissingen.
+          </h1>
+
+          <p class="lead">
+            ClaimKompas werkt voor <b>verzekeraars</b>.
+            Het systeem maakt “hoog‑risico” afwijzingen zichtbaar, toont vergelijkbare
+            <b>Kifid‑uitspraken</b> en geeft een <b>next‑best‑action</b>.
+          </p>
+
+          <div class="heroBtns">
+            <a class="btn primary" href="#demo">Online demo</a>
+            <a class="btn ghost" href="#product">Product tour</a>
+          </div>
+
+          <div class="heroStats" aria-label="Kernpunten">
+            <div class="stat">
+              <div class="n" data-count="3">3</div>
+              <div class="t">stappen workflow</div>
+            </div>
+            <div class="stat">
+              <div class="n" data-count="5">5</div>
+              <div class="t">precedenten per dossier</div>
+            </div>
+            <div class="stat">
+              <div class="n" data-count="1">1</div>
+              <div class="t">rapport naar dossier</div>
+            </div>
+          </div>
+
+          <div class="micro">
+            Beslisondersteuning (geen juridisch advies). Niet gelieerd aan Kifid.
+          </div>
+        </div>
+
+        <div class="heroVisual" aria-label="Dashboard preview">
+          <div class="screen">
+            <div class="screenTop">
+              <div class="screenLeft">
+                <span class="mini" aria-hidden="true"></span>
+                <span class="screenTitle">Triage dashboard</span>
+              </div>
+              <div class="screenRight">
+                <span class="tag">Explainable</span>
+                <span class="tag">Audit</span>
+              </div>
+            </div>
+
+            <div class="screenBody">
+              <div class="bento">
+                <div class="bCard">
+                  <div class="k">Escalatie‑risico</div>
+                  <div class="v">
+                    <span class="big" id="heroRisk">72%</span>
+                    <span class="badge high" id="heroRiskLabel">hoog</span>
+                  </div>
+                  <div class="bar"><div class="fill" id="heroFill" style="width:72%"></div></div>
+                </div>
+
+                <div class="bCard">
+                  <div class="k">Next‑best‑action</div>
+                  <div class="v">
+                    <span class="big" id="heroNBA">Schikken</span>
+                  </div>
+                  <div class="chips">
+                    <span class="chip">Pay</span>
+                    <span class="chip">Settle</span>
+                    <span class="chip">Fight</span>
+                  </div>
+                </div>
+
+                <div class="bCard wide">
+                  <div class="k">Top precedenten</div>
+                  <div class="precRow">
+                    <span class="prec">2023‑0XXX</span>
+                    <span class="prec">2022‑0YYY</span>
+                    <span class="prec">2021‑0ZZZ</span>
+                    <span class="prec">2020‑0AAA</span>
+                    <span class="prec">2019‑0BBB</span>
+                  </div>
+                  <div class="muted small">Klik → kernoverwegingen + relevante passages.</div>
+                </div>
+              </div>
+
+              <div class="cases" aria-label="Voorbeeld dossiers">
+                <button class="case active" data-risk="72" data-nba="Schikken" aria-pressed="true">
+                  <span class="cid">CK‑1042</span>
+                  <span class="cname">Dekking discussie</span>
+                  <span class="cpill">72%</span>
+                </button>
+                <button class="case" data-risk="52" data-nba="Aanvullend bewijs" aria-pressed="false">
+                  <span class="cid">CK‑1091</span>
+                  <span class="cname">Uitsluitingsclausule</span>
+                  <span class="cpill">52%</span>
+                </button>
+                <button class="case" data-risk="29" data-nba="Standpunt houden" aria-pressed="false">
+                  <span class="cid">CK‑1118</span>
+                  <span class="cname">Formele gronden</span>
+                  <span class="cpill">29%</span>
+                </button>
+              </div>
+
+              <div class="teams" aria-label="Teams">
+                <span>Claims</span><span>Legal</span><span>Compliance</span><span>Risk</span><span>Operations</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hintCard">
+            <div class="hintTitle">Wat je ziet</div>
+            <div class="hintItems">
+              <div class="hi"><span class="hDot"></span><span>Risico‑score (triage)</span></div>
+              <div class="hi"><span class="hDot"></span><span>Precedent‑cases (Kifid)</span></div>
+              <div class="hi"><span class="hDot"></span><span>Advies + export</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHO -->
+    <section id="voorwie" class="sec">
+      <div class="container">
+        <div class="head reveal">
+          <h2>Voor wie</h2>
+          <p>ClaimKompas past in het dagelijkse werk. Geen training‑marathon.</p>
+        </div>
+
+        <div class="twocol reveal" aria-label="Voor wie kaarten">
+          <div class="colCard">
+            <div class="colTop">
+              <span class="colIcon" aria-hidden="true">🧑‍💼</span>
+              <div>
+                <div class="colTitle">Claims teams</div>
+                <div class="colSub">Prioriteer dossiers op risico</div>
+              </div>
+            </div>
+            <div class="colList">
+              <div class="li">Sorteren op “hoog risico”</div>
+              <div class="li">Standaard playbooks</div>
+              <div class="li">Rapport naar dossier</div>
+            </div>
+          </div>
+
+          <div class="colCard">
+            <div class="colTop">
+              <span class="colIcon" aria-hidden="true">⚖️</span>
+              <div>
+                <div class="colTitle">Legal & Compliance</div>
+                <div class="colSub">Uitlegbaar en audit‑proof</div>
+              </div>
+            </div>
+            <div class="colList">
+              <div class="li">Precedenten + kernoverwegingen</div>
+              <div class="li">Log: wie besloot wat</div>
+              <div class="li">Exports (PDF/HTML in productie)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="route reveal" aria-label="Kifid route vs preventie">
+          <div class="routeHead">
+            <h3>Van procedure naar preventie</h3>
+            <p>Begrijpelijk in één blik.</p>
+          </div>
+
+          <div class="routeGrid">
+            <div class="routeCard">
+              <div class="rk">Kifid‑route</div>
+              <div class="steps">
+                <div class="st"><span class="snum">1</span><span class="stxt">Interne klacht</span></div>
+                <div class="st"><span class="snum">2</span><span class="stxt">Intake</span></div>
+                <div class="st"><span class="snum">3</span><span class="stxt">Juridische toets</span></div>
+                <div class="st"><span class="snum">4</span><span class="stxt">Bemiddeling</span></div>
+                <div class="st"><span class="snum">5</span><span class="stxt">Uitspraak</span></div>
+                <div class="st"><span class="snum">6</span><span class="stxt">Beroep (soms)</span></div>
+              </div>
+              <div class="rnote">Veel stappen. Veel doorlooptijd.</div>
+            </div>
+
+            <div class="routeCard featured">
+              <div class="rk">ClaimKompas‑route</div>
+              <div class="steps">
+                <div class="st"><span class="snum">1</span><span class="stxt">Triage op risico</span></div>
+                <div class="st"><span class="snum">2</span><span class="stxt">Precedenten erbij</span></div>
+                <div class="st"><span class="snum">3</span><span class="stxt">Besluit + rapport</span></div>
+              </div>
+              <div class="rnote">Sneller herbeoordelen. Minder escalatie.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES (Nmbrs-like: 4 feature blocks) -->
+    <section id="features" class="sec alt">
+      <div class="container">
+        <div class="head reveal">
+          <h2>De enige tooling die je nodig hebt om escalaties te managen</h2>
+          <p>Vier kernfeatures. Kort. Direct toepasbaar.</p>
+        </div>
+
+        <div class="grid4 reveal" aria-label="Features">
+          <article class="fCard">
+            <div class="fIcon" aria-hidden="true">🔎</div>
+            <div class="fTitle">Triage</div>
+            <div class="fSub">Markeer “hoog risico” dossiers automatisch.</div>
+          </article>
+          <article class="fCard">
+            <div class="fIcon" aria-hidden="true">📚</div>
+            <div class="fTitle">Precedent Finder</div>
+            <div class="fSub">Vergelijkbare uitspraken + kernoverwegingen.</div>
+          </article>
+          <article class="fCard">
+            <div class="fIcon" aria-hidden="true">🧮</div>
+            <div class="fTitle">Scenario’s</div>
+            <div class="fSub">Pay / settle / fight met expected value.</div>
+          </article>
+          <article class="fCard">
+            <div class="fIcon" aria-hidden="true">🧾</div>
+            <div class="fTitle">Audit & export</div>
+            <div class="fSub">Rationale + bronnen + log naar dossier.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT TOUR (tabs like Nmbrs product tour callout) -->
+    <section id="product" class="sec">
+      <div class="container">
+        <div class="head reveal">
+          <h2>Product tour</h2>
+          <p>Klik door de screens. Geen lange uitleg.</p>
+        </div>
+
+        <div class="tour reveal">
+          <div class="tablist" role="tablist" aria-label="Product tabs">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="p-triage" id="t-triage">Triage</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="p-dossier" id="t-dossier">Dossier</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="p-rapport" id="t-rapport">Rapport</button>
+          </div>
+
+          <div class="panes">
+            <section class="pane active" role="tabpanel" id="p-triage" aria-labelledby="t-triage">
+              <div class="ui">
+                <div class="uiLeft">
+                  <div class="uiTitle">Inbox</div>
+                  <div class="uiList">
+                    <div class="uiRow active">
+                      <span class="uiId">CK‑1042</span>
+                      <span class="uiLbl">hoog 78%</span>
+                      <span class="uiTxt">Dekking discussie</span>
+                    </div>
+                    <div class="uiRow">
+                      <span class="uiId">CK‑1091</span>
+                      <span class="uiLbl">middel 52%</span>
+                      <span class="uiTxt">Uitsluitingsclausule</span>
+                    </div>
+                    <div class="uiRow">
+                      <span class="uiId">CK‑1118</span>
+                      <span class="uiLbl">laag 29%</span>
+                      <span class="uiTxt">Formele gronden</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uiRight">
+                  <div class="kpi">
+                    <span class="k">Risico</span>
+                    <span class="v">78%</span>
+                    <span class="b high">hoog</span>
+                  </div>
+                  <div class="kpi">
+                    <span class="k">Actie</span>
+                    <span class="v">Schikken</span>
+                    <span class="b">next</span>
+                  </div>
+                  <div class="kpi">
+                    <span class="k">Precedenten</span>
+                    <span class="v">5</span>
+                    <span class="b">items</span>
+                  </div>
+
+                  <div class="uiFoot">
+                    <span class="uiHint">Tip: sorteer op “hoog risico” voor snelle herbeoordeling.</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="pane" role="tabpanel" id="p-dossier" aria-labelledby="t-dossier">
+              <div class="stack">
+                <div class="stackTop">
+                  <span class="pill tiny"><span class="dot" aria-hidden="true"></span>Explainable</span>
+                  <span class="pill tiny">Audit‑trail</span>
+                  <span class="pill tiny">Export</span>
+                </div>
+
+                <div class="stackGrid">
+                  <div class="stackCard">
+                    <div class="k">Top factoren</div>
+                    <div class="rows">
+                      <div class="row"><span>Polis‑uitleg</span><span class="pbar"><i style="width:82%"></i></span></div>
+                      <div class="row"><span>Communicatie</span><span class="pbar"><i style="width:68%"></i></span></div>
+                      <div class="row"><span>Bewijs</span><span class="pbar"><i style="width:44%"></i></span></div>
+                    </div>
+                  </div>
+
+                  <div class="stackCard">
+                    <div class="k">Top precedenten</div>
+                    <div class="chips2">
+                      <span class="pill tiny">2023‑0XXX</span>
+                      <span class="pill tiny">2022‑0YYY</span>
+                      <span class="pill tiny">2021‑0ZZZ</span>
+                    </div>
+                    <div class="muted small">Kernoverwegingen automatisch samengevat.</div>
+                  </div>
+
+                  <div class="stackCard">
+                    <div class="k">Next best action</div>
+                    <div class="big">Schikken</div>
+                    <div class="muted small">Met template‑rapport voor dossier.</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="pane" role="tabpanel" id="p-rapport" aria-labelledby="t-rapport">
+              <div class="paper">
+                <div class="paperTop">
+                  <div>
+                    <div class="paperT">Rapport</div>
+                    <div class="paperS">CK‑1042 • Schade</div>
+                  </div>
+                  <span class="pill tiny">PDF/HTML</span>
+                </div>
+
+                <div class="paperGrid">
+                  <div class="paperKpi"><span class="k">Risico</span><span class="v">78%</span></div>
+                  <div class="paperKpi"><span class="k">Advies</span><span class="v">Schikken</span></div>
+                  <div class="paperKpi"><span class="k">Precedenten</span><span class="v">5</span></div>
+                </div>
+
+                <div class="paperBlock">
+                  <div class="k">Waarom</div>
+                  <div class="muted">Korte rationale + bronnenlijst. Klaar voor dossier.</div>
+                </div>
+
+                <div class="paperBlock">
+                  <div class="k">Audit</div>
+                  <div class="audit">
+                    <div class="a"><span class="adot"></span> analyst → input</div>
+                    <div class="a"><span class="adot"></span> model → score + precedenten</div>
+                    <div class="a"><span class="adot"></span> reviewer → besluit</div>
+                  </div>
+                </div>
+
+                <div class="paperBtns">
+                  <a class="btn ghost small" href="functionaliteiten.html">Functionaliteitenlijst</a>
+                  <a class="btn primary small" href="#demo">Boek demo</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="logos reveal" aria-label="Integraties / systemen (placeholder)">
+          <div class="lgTitle">Integraties</div>
+          <div class="lgRow">
+            <span>Claimsysteem</span>
+            <span>DMS</span>
+            <span>Data‑warehouse</span>
+            <span>SSO</span>
+            <span>BI</span>
+          </div>
+          <div class="muted small">Koppelingen lopen via API / batch. In pilot stemmen we dit af op jullie stack.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="prijzen" class="sec alt">
+      <div class="container">
+        <div class="head reveal">
+          <h2>Tarieven</h2>
+          <p>Start met een pilot. Schaal naar enterprise.</p>
+        </div>
+
+        <div class="prices reveal" aria-label="Pricing">
+          <div class="pCard">
+            <div class="pTop">
+              <div class="pName">Pilot</div>
+              <div class="pPrice">€— <span>/ maand</span></div>
+            </div>
+            <div class="pList">
+              <div class="pl">Triage + precedent‑view</div>
+              <div class="pl">Rapport templates</div>
+              <div class="pl">1 team</div>
+            </div>
+            <a class="btn ghost" href="#demo">Offerte</a>
+          </div>
+
+          <div class="pCard featured">
+            <div class="pTag">Meest gekozen</div>
+            <div class="pTop">
+              <div class="pName">Pro</div>
+              <div class="pPrice">€— <span>/ maand</span></div>
+            </div>
+            <div class="pList">
+              <div class="pl">Meerdere teams</div>
+              <div class="pl">Audit‑trail + exports</div>
+              <div class="pl">Integratie‑opties</div>
+            </div>
+            <a class="btn primary" href="#demo">Boek demo</a>
+          </div>
+
+          <div class="pCard">
+            <div class="pTop">
+              <div class="pName">Enterprise</div>
+              <div class="pPrice">Op maat</div>
+            </div>
+            <div class="pList">
+              <div class="pl">SSO/RBAC uitgebreid</div>
+              <div class="pl">API + claims/DMS</div>
+              <div class="pl">Hostingopties</div>
+            </div>
+            <a class="btn ghost" href="#demo">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="sec">
+      <div class="container">
+        <div class="head reveal">
+          <h2>FAQ</h2>
+          <p>Kort antwoord. Daarna demo.</p>
+        </div>
+
+        <div class="faq reveal" aria-label="Veelgestelde vragen">
+          <details class="qa">
+            <summary>Is ClaimKompas gelieerd aan Kifid?</summary>
+            <div class="ans">Nee. ClaimKompas is tooling voor verzekeraars en staat los van Kifid.</div>
+          </details>
+
+          <details class="qa">
+            <summary>Geeft ClaimKompas juridisch advies?</summary>
+            <div class="ans">Nee. Het systeem ondersteunt besluitvorming met signalen, vergelijkingen en rapportage. De beslissing blijft bij de verzekeraar.</div>
+          </details>
+
+          <details class="qa">
+            <summary>Hoe komt het systeem aan precedenten?</summary>
+            <div class="ans">In productie koppelen we een interne “precedent library” gebaseerd op (publiek beschikbare) uitspraken en jullie tagging/metadata. In pilots gebruiken we mock‑data.</div>
+          </details>
+
+          <details class="qa">
+            <summary>Kan dit integreren met ons claimsysteem?</summary>
+            <div class="ans">Ja. Via API/batch en exports. In de pilot definiëren we welke velden en documenten nodig zijn.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO CTA -->
+    <section id="demo" class="ctaSec">
+      <div class="container ctaGrid">
+        <div class="ctaCopy reveal">
+          <div class="pill dark">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Online demo</span>
+          </div>
+          <h2>Laat ons het tonen, niet uitleggen.</h2>
+          <p>
+            In 30 minuten: triage inbox → dossier view → export rapport.
+            Gericht op claims, legal en compliance.
+          </p>
+
+          <div class="ctaBtns">
+            <a class="btn primary" href="mailto:hello@claimkompas.nl?subject=Demo%20ClaimKompas&body=Hoi%2C%0A%0AWij%20willen%20een%20demo%20van%20ClaimKompas.%0A%0AOrganisatie%3A%20...%0ATeam%3A%20Claims%2FLegal%2FCompliance%0AUse%20case%3A%20...%0A%0AGroet%2C">
+              Demo aanvragen (e‑mail)
+            </a>
+            <a class="btn ghost" href="tel:+31201234567">Bel: +31 20 123 4567</a>
+          </div>
+
+          <div class="micro dark">
+            Disclaimer: beslisondersteuning, geen juridisch advies. Niet gelieerd aan Kifid.
+          </div>
+        </div>
+
+        <div class="ctaCard reveal" aria-label="Demo checklist">
+          <div class="ccTop">
+            <div class="ccTitle">Je ziet in de demo</div>
+            <span class="tag dark">Live walkthrough</span>
+          </div>
+          <div class="ccList">
+            <div class="cc"><span class="tick" aria-hidden="true"></span><span>Triage op escalatie‑risico</span></div>
+            <div class="cc"><span class="tick" aria-hidden="true"></span><span>Precedent‑cases erbij</span></div>
+            <div class="cc"><span class="tick" aria-hidden="true"></span><span>Next‑best‑action</span></div>
+            <div class="cc"><span class="tick" aria-hidden="true"></span><span>Rapport + audit‑trail</span></div>
+          </div>
+          <div class="ccFoot">
+            <span class="muted">Tip: neem 2–3 voorbeeldcases mee (geanonimiseerd).</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ftr" role="contentinfo">
+    <div class="container fgrid">
+      <div>
+        <div class="brand footBrand">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="btxt">
+            <span class="bname">ClaimKompas</span>
+            <span class="bsub">Voor verzekeraars • Kifid‑voor beslisondersteuning</span>
+          </span>
+        </div>
+        <div class="fnote">
+          © <span id="year"></span> ClaimKompas • beslisondersteuning • geen juridisch advies.
+        </div>
+      </div>
+
+      <div class="fcol">
+        <div class="fh">Product</div>
+        <a href="#features">Features</a>
+        <a href="#product">Product tour</a>
+        <a href="functionaliteiten.html">Functionaliteitenlijst</a>
+      </div>
+
+      <div class="fcol">
+        <div class="fh">Sales</div>
+        <a href="#demo">Demo</a>
+        <a href="#prijzen">Tarieven</a>
+        <a href="mailto:hello@claimkompas.nl">hello@claimkompas.nl</a>
+      </div>
+
+      <div class="fcol">
+        <div class="fh">Legal</div>
+        <a href="#top">Privacy</a>
+        <a href="#top">Voorwaarden</a>
+        <a href="#top">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

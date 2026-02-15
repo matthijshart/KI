@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClaimKompas — Functionaliteitenlijst</title>
+  <meta name="description" content="Overzicht van ClaimKompas functionaliteiten (prototype/marketingpagina)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Naar inhoud</a>
+
+  <header class="hdr" role="banner">
+    <div class="container nav">
+      <a class="brand" href="index.html#top" aria-label="Terug naar home">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="btxt">
+          <span class="bname">ClaimKompas</span>
+          <span class="bsub">Functionaliteitenlijst</span>
+        </span>
+      </a>
+
+      <div class="cta">
+        <a class="btn ghost" href="index.html#product">Product tour</a>
+        <a class="btn primary" href="index.html#demo">Boek demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="sec">
+    <div class="container">
+      <div class="head reveal">
+        <h1 class="h1small">Functionaliteitenlijst</h1>
+        <p>Compact overzicht. Bedoeld als gesprekstarter voor pilot & integratie.</p>
+      </div>
+
+      <div class="listGrid reveal">
+        <section class="listCard">
+          <h2>Triage</h2>
+          <ul>
+            <li>Escalatie‑risico score per dossier (demo)</li>
+            <li>Sorteren/filters: hoog/middel/laag</li>
+            <li>Signalen: polis‑uitleg, bewijs, communicatie</li>
+          </ul>
+        </section>
+
+        <section class="listCard">
+          <h2>Precedent Finder</h2>
+          <ul>
+            <li>Top N vergelijkbare uitspraken (demo)</li>
+            <li>Kernoverwegingen samenvatten</li>
+            <li>Bronnenlijst per rapport</li>
+          </ul>
+        </section>
+
+        <section class="listCard">
+          <h2>Besluit & scenario’s</h2>
+          <ul>
+            <li>Pay / settle / fight playbook</li>
+            <li>Expected value (indicatief)</li>
+            <li>Workflow: analyst → reviewer</li>
+          </ul>
+        </section>
+
+        <section class="listCard">
+          <h2>Governance</h2>
+          <ul>
+            <li>Audit‑trail (wie/wat/wanneer)</li>
+            <li>Rapport export (HTML/PDF in productie)</li>
+            <li>RBAC/SSO optioneel</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="actionsRow reveal">
+        <button class="btn ghost" onclick="window.print()">Print / PDF</button>
+        <a class="btn primary" href="index.html#demo">Demo aanvragen</a>
+      </div>
+
+      <div class="micro reveal">
+        Disclaimer: dit is een marketing/preview document. Geen juridisch advies.
+      </div>
+    </div>
+  </main>
+
+  <footer class="ftr" role="contentinfo">
+    <div class="container fgrid">
+      <div>
+        <div class="brand footBrand">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="btxt">
+            <span class="bname">ClaimKompas</span>
+            <span class="bsub">Voor verzekeraars • Kifid‑voor beslisondersteuning</span>
+          </span>
+        </div>
+        <div class="fnote">
+          © <span id="year"></span> ClaimKompas
+        </div>
+      </div>
+
+      <div class="fcol">
+        <div class="fh">Links</div>
+        <a href="index.html#top">Home</a>
+        <a href="index.html#product">Product tour</a>
+        <a href="index.html#demo">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
