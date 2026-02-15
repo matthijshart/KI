@@ -123,12 +123,34 @@
     return ['laag','low'];
   };
 
-  const setHero = (risk, nba) => {
+  const animateHeroRisk = (to, duration = 1800) => {
+    if (!heroRisk || !heroFill) return;
+    const target = clamp(to, 0, 100);
+    const start = performance.now();
+
+    const step = (t) => {
+      const progress = Math.min(1, (t - start) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * eased);
+
+      heroRisk.textContent = `${value}%`;
+      heroFill.style.width = `${value}%`;
+
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const setHero = (risk, nba, { animateRisk = false } = {}) => {
     const r = clamp(risk, 0, 100);
     const [txt, cls] = labelFor(r);
 
-    if (heroRisk) heroRisk.textContent = `${Math.round(r)}%`;
-    if (heroFill) heroFill.style.width = `${Math.round(r)}%`;
+    if (animateRisk) animateHeroRisk(r);
+    else {
+      if (heroRisk) heroRisk.textContent = `${Math.round(r)}%`;
+      if (heroFill) heroFill.style.width = `${Math.round(r)}%`;
+    }
     if (heroNBA) heroNBA.textContent = nba;
 
     if (heroRiskLabel){
@@ -150,6 +172,23 @@
       setHero(risk, nba);
     });
   });
+
+  if (heroRisk) {
+    const initialRisk = parseInt(heroRisk.textContent || '0', 10);
+    const initialNba = heroNBA?.textContent || '—';
+    setHero(0, initialNba);
+
+    const riskObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setHero(initialRisk, initialNba, { animateRisk: true });
+          riskObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.55 });
+
+    riskObserver.observe(heroRisk);
+  }
 
   // Tabs (product tour)
   const tabs = qsa('.tab');
