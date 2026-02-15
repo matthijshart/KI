@@ -4,7 +4,7 @@ Deze versie is opgezet met een **Nmbrs-achtige structuur**:
 - duidelijke top-navigatie (met dropdowns)
 - hero + dashboard preview
 - secties met korte copy en card-layouts
-- product tour (tabs: triage / dossier / rapport)
+- product tour (tabs: beoordeling / dossier / rapport)
 - FAQ (accordions)
 - extra pagina: `functionaliteiten.html` (printbaar)
 
